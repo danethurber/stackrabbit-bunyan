@@ -16,15 +16,14 @@ npm install stackrabbit-bunyan
 const stackrabbit = require('stackrabbit')
 const bunyan = require('bunyan')
 const bunyanMiddleware = require('stackrabbit-bunyan')
+
 const logger = bunyan.createLogger(...)
 
 const listener = stackrabbit({
   ...
 })
 
-listener.use(bunyanMiddleware({
-  logger: logger
-}))
+listener.use(bunyanMiddleware(logger))
 
 listener.listen(function * () {
 })

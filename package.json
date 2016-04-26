@@ -19,5 +19,8 @@
     "ampqlib"
   ],
   "author": "Dane Thurber <dane.thurber@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "omit": "^1.0.1"
+  }
 }
