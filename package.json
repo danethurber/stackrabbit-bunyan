@@ -1,6 +1,6 @@
 {
   "name": "stackrabbit-bunyan",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bunyan logging middleware for stackrabbit",
   "main": "index.js",
   "scripts": {
