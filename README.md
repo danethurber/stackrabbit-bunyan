@@ -28,5 +28,9 @@ listener.use(bunyanMiddleware(logger))
 listener.listen(function * () {
 })
 
+listener.on('error', (err) => {
+  logger.error(err)
+})
+
 listener.connect()
 ```

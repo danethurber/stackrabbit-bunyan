@@ -8,14 +8,7 @@ module.exports = function bunyanMiddleware(logger, omittedKeys) {
 
   return function * bunyanMiddleware(next) {
     logger.info(omit(omittedKeys, this), '--> Message Received')
-
-    try {
-      yield next
-    } catch(err) {
-      logger.error(omit(omittedKeys, Object.assign({ err }, this)), 'Error Processing Message')
-      throw err
-    } finally {
-      logger.info(omit(omittedKeys, this), '<-- Message Processed')
-    }
+    yield next
+    logger.info(omit(omittedKeys, this), '<-- Message Processed')
   }
 }
